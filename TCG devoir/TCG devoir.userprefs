@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\UnitMotor.cs">
     <Files>
       <File FileName="Assets\UnitMotor.cs" Line="36" Column="27" />
+=======
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\cartesExistantes.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Classes\carte.cs" Line="33" Column="1" />
+      <File FileName="Assets\cartesExistantes.cs" Line="17" Column="1" />
+>>>>>>> d2f9875127ee26aa2f71227e99c8a379eaaea40f
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
