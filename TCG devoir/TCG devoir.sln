@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{55AC8CA6-6258-8CF1-BECF-0C247038F289}") = "TCG devoir", "Assembly-CSharp.csproj", "{806EDD08-DE0B-6CF8-5A26-8A19F8369E8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{806EDD08-DE0B-6CF8-5A26-8A19F8369E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{806EDD08-DE0B-6CF8-5A26-8A19F8369E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{806EDD08-DE0B-6CF8-5A26-8A19F8369E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{806EDD08-DE0B-6CF8-5A26-8A19F8369E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
