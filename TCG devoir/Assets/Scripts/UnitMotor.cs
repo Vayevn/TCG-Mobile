@@ -3,13 +3,17 @@ using System.Collections;
 
 public class UnitMotor : MonoBehaviour {
 
-	public float moveMultip = 2;
-	public Vector3 direction = Vector3.zero;
-
-	private float idleTimeTemp;
-
 	protected Animator animator;
 	AnimatorStateInfo stateInfo;
+
+	public float moveMultip = 2;
+	float idleTimeTemp;
+
+	//variables a utiliser pour les cartes
+	[HideInInspector]
+	public Vector3 direction = Vector3.zero;
+	public GameObject target;
+
 
 	// Use this for initialization
 	void Start () 
@@ -21,14 +25,20 @@ public class UnitMotor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		if (gameObject.tag == "Player1Unit" || gameObject.tag == "Player2Unit") 
+		{
+			target = GetComponentInChildren<DetectionZone> ().target;
+		}
+
 		if (animator) 
 		{
+			//gestion du déplacement aléatoire
 			stateInfo = animator.GetCurrentAnimatorStateInfo (0);
 			if (animator.IsInTransition (0)) 
 			{
 				animator.SetFloat ("idleTime", idleTimeTemp);
 			}
-
+							
 			if (stateInfo.fullPathHash == Animator.StringToHash ("Base Layer.Idle"))
 			{
 				animator.SetFloat ("moveTime", Random.value + moveMultip);
@@ -42,6 +52,12 @@ public class UnitMotor : MonoBehaviour {
 				transform.position += direction * 2 * Time.deltaTime;
 				animator.SetFloat ("moveTime", animator.GetFloat("moveTime") - Time.deltaTime);
 			}
+
+			else if (stateInfo.fullPathHash == Animator.StringToHash ("Base Layer.Follow")) 
+			{
+				direction = target.transform.position - transform.position;
+				transform.position += direction * 2 * Time.deltaTime;
+			} 
 		}
 	}
 }
