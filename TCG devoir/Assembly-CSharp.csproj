@@ -45,8 +45,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Attack.cs" />
      <Compile Include="Assets\Scripts\Classes\carte.cs" />
      <Compile Include="Assets\Scripts\DetectionZone.cs" />
+     <Compile Include="Assets\Scripts\Life.cs" />
      <Compile Include="Assets\Scripts\UnitMotor.cs" />
      <Compile Include="Assets\cartesExistantes.cs" />
  <Reference Include="UnityEngine.UI">
