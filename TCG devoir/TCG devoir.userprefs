@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Attack.cs">
@@ -6,6 +7,14 @@
       <File FileName="Assets\Scripts\Attack.cs" Line="32" Column="51" />
       <File FileName="Assets\Scripts\UnitMotor.cs" Line="34" Column="4" />
       <File FileName="Assets\Scripts\DetectionZone.cs" Line="1" Column="1" />
+=======
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Classes\carte.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Classes\carte.cs" Line="46" Column="32" />
+      <File FileName="Assets\Scripts\Classes\deck.cs" Line="1" Column="1" />
+>>>>>>> origin/Classes_UNTESTED
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
