@@ -10,7 +10,7 @@ public class DetectionZone : MonoBehaviour {
 	void Start () 
 	{
 		animator = GetComponentInParent<Animator>();
-
+		animator.SetBool ("haveInRange", false);
 	}
 
 	void OnTriggerEnter(Collider other) {

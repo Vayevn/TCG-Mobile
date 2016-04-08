@@ -7,6 +7,8 @@ public class Attack : MonoBehaviour {
 	AnimatorStateInfo stateInfo;
 
 	public GameObject target;
+	public Vector3 direction = Vector3.zero;
+
 
 	void Start () 
 	{
@@ -21,7 +23,7 @@ public class Attack : MonoBehaviour {
 	void OnCollisionExit (Collision other) {
 		animator.SetBool ("onContact", false);
 	}
-
+		
 	// Update is called once per frame
 	void Update () {
 		if (animator) {
@@ -30,7 +32,12 @@ public class Attack : MonoBehaviour {
 			if (stateInfo.fullPathHash == Animator.StringToHash ("Base Layer.Attack")) 
 			{
 				target.GetComponent<Life> ().currentLife -= 2 * Time.deltaTime;
-
+				direction = target.transform.position - transform.position;
+				transform.position += direction * 2 * Time.deltaTime;
+			}
+			if (target == null) 
+			{
+				animator.SetBool ("onContact", false);
 			}
 		}
 	}

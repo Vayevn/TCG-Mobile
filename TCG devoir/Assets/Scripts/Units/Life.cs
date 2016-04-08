@@ -13,7 +13,7 @@ public class Life : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (currentLife == 0) {
+		if (currentLife <= 0) {
 			Destroy (this.gameObject);
 		}
 		//regeneration permanente

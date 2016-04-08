@@ -9,6 +9,13 @@ public class UnitMotor : MonoBehaviour {
 	public float moveMultip = 2;
 	float idleTimeTemp;
 
+
+	public float xMin = -36.5f;
+	public float xMax = 36.5f;
+	public float zMin = -24f;
+	public float zMax = 24f;
+
+
 	//variables a utiliser pour les cartes
 	[HideInInspector]
 	public Vector3 direction = Vector3.zero;
@@ -58,6 +65,10 @@ public class UnitMotor : MonoBehaviour {
 				direction = target.transform.position - transform.position;
 				transform.position += direction * 2 * Time.deltaTime;
 			} 
+			if (target == null) 
+			{
+				animator.SetBool ("haveInRange", false);
+			}
 		}
 	}
 }

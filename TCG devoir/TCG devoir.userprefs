@@ -1,20 +1,12 @@
-<<<<<<< HEAD
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Attack.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Units\DetectionZone.cs">
     <Files>
-      <File FileName="Assets\Scripts\Life.cs" Line="18" Column="4" />
-      <File FileName="Assets\Scripts\Attack.cs" Line="32" Column="51" />
-      <File FileName="Assets\Scripts\UnitMotor.cs" Line="34" Column="4" />
-      <File FileName="Assets\Scripts\DetectionZone.cs" Line="1" Column="1" />
-=======
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Classes\carte.cs">
-    <Files>
-      <File FileName="Assets\Scripts\Classes\carte.cs" Line="46" Column="32" />
-      <File FileName="Assets\Scripts\Classes\deck.cs" Line="1" Column="1" />
->>>>>>> origin/Classes_UNTESTED
+      <File FileName="Assets\Scripts\Units\UnitMotor.cs" Line="68" Column="4" />
+      <File FileName="Assets\Scripts\Units\Attack.cs" Line="37" Column="5" />
+      <File FileName="Assets\Scripts\Units\Life.cs" Line="25" Column="3" />
+      <File FileName="Assets\Scripts\Units\Destroyed.cs" Line="20" Column="2" />
+      <File FileName="Assets\Scripts\Units\DetectionZone.cs" Line="20" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
