@@ -9,12 +9,10 @@ public class UnitMotor : MonoBehaviour {
 	public float moveMultip = 2;
 	float idleTimeTemp;
 
-
-	public float xMin = -36.5f;
-	public float xMax = 36.5f;
-	public float zMin = -24f;
-	public float zMax = 24f;
-
+	public float xMin = -36f;
+	public float xMax = 36f;
+	public float zMin = -24;
+	public float zMax = 24;
 
 	//variables a utiliser pour les cartes
 	[HideInInspector]
@@ -56,6 +54,17 @@ public class UnitMotor : MonoBehaviour {
 
 			else if (stateInfo.fullPathHash == Animator.StringToHash ("Base Layer.Move"))
 			{
+				if (transform.position.x <= xMin) {
+					direction.x = 1;
+				}
+				else if (transform.position.x >= xMax) {
+					direction.x = -1;
+				}
+				if (transform.position.z <= zMin) {
+					direction.z = 1;
+				} else if (transform.position.z >= zMax) {
+					direction.z = -1;
+				}
 				transform.position += direction * 2 * Time.deltaTime;
 				animator.SetFloat ("moveTime", animator.GetFloat("moveTime") - Time.deltaTime);
 			}
@@ -69,6 +78,6 @@ public class UnitMotor : MonoBehaviour {
 			{
 				animator.SetBool ("haveInRange", false);
 			}
-		}
+		}			
 	}
 }
