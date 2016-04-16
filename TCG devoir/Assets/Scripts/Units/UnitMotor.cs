@@ -16,8 +16,8 @@ public class UnitMotor : MonoBehaviour {
 
 	//variables a utiliser pour les cartes
 	[HideInInspector]
-	public Vector3 direction = Vector3.zero;
-	public GameObject target;
+	public Vector3 direction = Vector3.zero; //vecteur de déplacement d'un pion quelque soit son état
+	public GameObject target; //Cible que le pion va suivre dans son Follow // Ne déclanche pas le state Follow
 
 
 	// Use this for initialization
@@ -25,6 +25,10 @@ public class UnitMotor : MonoBehaviour {
 	{
 		animator = GetComponent<Animator>();
 		idleTimeTemp = animator.GetFloat ("idleTime");
+		xMin = -36f;
+		xMax = 36f;
+		zMin = -24;
+		zMax = 24;
 	}
 	
 	// Update is called once per frame

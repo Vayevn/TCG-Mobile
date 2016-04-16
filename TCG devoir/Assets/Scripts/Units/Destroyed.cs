@@ -3,15 +3,13 @@ using System.Collections;
 
 public class Destroyed : MonoBehaviour {
 
-	public GameObject aggressor;
+	public GameObject aggressor; //Game Object qui attaque le pion
 	protected Animator animator;
 
 	private bool onQuit = false;
 
 	public GameObject player1Unit;
 	public GameObject player2Unit;
-
-	Vector3 position = Vector3.zero;
 
 	// Update is called once per frame
 	void Start () {

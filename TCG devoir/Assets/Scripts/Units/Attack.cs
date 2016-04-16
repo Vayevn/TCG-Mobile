@@ -27,6 +27,10 @@ public class Attack : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (animator) {
+			if (target == null) 
+			{
+				animator.SetBool ("onContact", false);
+			}
 			stateInfo = animator.GetCurrentAnimatorStateInfo (0);
 
 			if (stateInfo.fullPathHash == Animator.StringToHash ("Base Layer.Attack")) 
@@ -34,10 +38,6 @@ public class Attack : MonoBehaviour {
 				target.GetComponent<Life> ().currentLife -= 2 * Time.deltaTime;
 				direction = target.transform.position - transform.position;
 				transform.position += direction * 2 * Time.deltaTime;
-			}
-			if (target == null) 
-			{
-				animator.SetBool ("onContact", false);
 			}
 		}
 	}

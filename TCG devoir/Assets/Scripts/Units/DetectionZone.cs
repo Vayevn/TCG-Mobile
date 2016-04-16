@@ -16,8 +16,10 @@ public class DetectionZone : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 
 		if (animator) {
-			animator.SetBool ("haveInRange", true);
-			target = other.gameObject;
+			if (animator. GetBool ("havenRange") == false) {
+				animator.SetBool ("haveInRange", true);
+				target = other.gameObject;
+			}
 		}
 	}
 
