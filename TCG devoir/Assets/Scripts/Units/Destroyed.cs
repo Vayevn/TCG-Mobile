@@ -12,34 +12,38 @@ public class Destroyed : MonoBehaviour {
 	public GameObject player2Unit;
 
 	// Update is called once per frame
-	void Start () {
+	void Start () 
+	{
 		animator = GetComponent<Animator>();
 	}
 
-	void OnCollisionEnter (Collision other) {
+	void OnCollisionEnter (Collision other) 
+	{
 		aggressor = other.gameObject;
 		animator.SetBool ("onContact", true);
 
 	}
 
-	void OnDestroy () {
-		if (!onQuit) 
+	void OnDestroy () 
+	{
+		/*if (!onQuit) 
 		{
 			aggressor.GetComponent<Animator> ().SetBool ("onContact", false);
-		}
-		if (gameObject.layer == 8) //neutral unit
-		{ 
-			if (aggressor.layer == 11) //player 1 unit
-			{ 
-				Instantiate (player1Unit, transform.position, transform.rotation);
-			} else if (aggressor.layer == 12) //player2 unit
-			{ 
-				Instantiate (player2Unit, transform.position, transform.rotation);
+		}*/
+		if (gameObject.layer == 8) { //pion neutre
+			if (aggressor.layer == 11) { //attaqué par pion rouge
+				Instantiate (player1Unit, transform.position, transform.rotation);//convertion en pion rouge
+			} else if (aggressor.layer == 12) { //attaqué par pion bleu
+				Instantiate (player2Unit, transform.position, transform.rotation);//convertion en pion bleu
 			}
+		} else if (gameObject.layer == 11 && aggressor.layer == 14) //pion rouge qui change de couleur (carte de contrôle)
+		{ 
+			Instantiate (player2Unit, transform.position, transform.rotation);
 		}
 	}
 
-	void OnApplicationQuit() {
+	void OnApplicationQuit () 
+	{
 		onQuit = true;
 	}
 }

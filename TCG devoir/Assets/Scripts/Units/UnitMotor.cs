@@ -52,7 +52,7 @@ public class UnitMotor : MonoBehaviour {
 			{
 				animator.SetFloat ("moveTime", Random.value + moveMultip);
 				direction = new Vector3 (Random.Range (-1.0f, 1.0f), 0, Random.Range (-1.0f, 1.0f)).normalized;
-				Debug.Log (direction);
+				//Debug.Log (direction);
 				animator.SetFloat ("idleTime", animator.GetFloat("idleTime") - Time.deltaTime);
 			}
 
