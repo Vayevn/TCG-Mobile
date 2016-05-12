@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{55AC8CA6-6258-8CF1-BECF-0C247038F289}") = "TCG devoir", "Assembly-CSharp.csproj", "{806EDD08-DE0B-6CF8-5A26-8A19F8369E8A}"
 EndProject
+Project("{55AC8CA6-6258-8CF1-BECF-0C247038F289}") = "TCG devoir", "Assembly-CSharp-Editor.csproj", "{58686C2E-3CA9-9EF0-EB62-2D07FFD6F05A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{806EDD08-DE0B-6CF8-5A26-8A19F8369E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{806EDD08-DE0B-6CF8-5A26-8A19F8369E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{806EDD08-DE0B-6CF8-5A26-8A19F8369E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58686C2E-3CA9-9EF0-EB62-2D07FFD6F05A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58686C2E-3CA9-9EF0-EB62-2D07FFD6F05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58686C2E-3CA9-9EF0-EB62-2D07FFD6F05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58686C2E-3CA9-9EF0-EB62-2D07FFD6F05A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -45,6 +45,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Deck &amp; Cards\CardInfoHolder.cs" />
+     <Compile Include="Assets\Scripts\Deck &amp; Cards\CustomList.cs" />
+     <Compile Include="Assets\Scripts\Deck &amp; Cards\SaveSystem.cs" />
+     <Compile Include="Assets\Scripts\Deck &amp; Cards\SimpleDeckManager.cs" />
+     <Compile Include="Assets\Scripts\Deck &amp; Cards\decksManager.cs" />
+     <Compile Include="Assets\Scripts\Serializable\carte.cs" />
+     <Compile Include="Assets\Scripts\Serializable\deck.cs" />
+     <Compile Include="Assets\Scripts\Serializable\saveData.cs" />
+     <Compile Include="Assets\Scripts\UI\DisplayUIList.cs" />
+     <Compile Include="Assets\Scripts\UI\QuitGame.cs" />
+     <Compile Include="Assets\Scripts\UI\StartGame.cs" />
+     <Compile Include="Assets\Scripts\UI\UICardsFunctions.cs" />
      <Compile Include="Assets\Scripts\Units\Attack.cs" />
      <Compile Include="Assets\Scripts\Units\Destroyed.cs" />
      <Compile Include="Assets\Scripts\Units\DetectionZone.cs" />
