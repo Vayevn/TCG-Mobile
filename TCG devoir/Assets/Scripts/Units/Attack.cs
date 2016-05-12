@@ -12,7 +12,7 @@ public class Attack : MonoBehaviour {
 
 	void Start () 
 	{
-		animator = GetComponent<Animator>();
+		animator = GetComponent<Animator> ();
 	}
 
 	void OnCollisionEnter (Collision other) {

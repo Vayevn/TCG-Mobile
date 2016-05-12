@@ -3,11 +3,14 @@ using System.Collections;
 
 public class Orders : MonoBehaviour {
 
+	public GameObject mouseOver;
 	public GameObject controlled;
 
 	[HideInInspector]
 	public int playerLayer = 14;
 	public LayerMask _UnitLayer;
+
+
 
 	void Update () {
 
@@ -15,22 +18,46 @@ public class Orders : MonoBehaviour {
 		Ray _Ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		if (Physics.Raycast (_Ray, out _Hit, _UnitLayer)) 
 		{
-			controlled = _Hit.transform.gameObject;	
-		} else 
+			mouseOver = _Hit.transform.gameObject;	
+		} 
+		else 
 		{
-			controlled = null;
+			mouseOver = null;
 		}
-		if (controlled.tag == null)
-			controlled = controlled.transform.parent.gameObject;
+
+		if (mouseOver.tag == "DetectZone")
+			mouseOver = mouseOver.transform.parent.gameObject;
 
 
-		if (Input.GetMouseButton (0) && (controlled != null)) 
+		if (Input.GetMouseButton (0) && mouseOver != null) 
 		{
-			if (Input.GetKey (KeyCode.A) && (controlled.layer != playerLayer)) 
+			controlled = mouseOver;
+		} 
+		if (Input.GetMouseButton (0) && mouseOver == null)
+			controlled = null;
+
+
+		if (Input.GetKey (KeyCode.A) && controlled.layer != playerLayer) //convert
+		{
+			controlled.GetComponent<Destroyed> ().aggressor = this.gameObject;
+			controlled.GetComponent<Life> ().currentLife = 0;
+		}
+		else if (Input.GetKey (KeyCode.Z) && controlled.layer != playerLayer) //destroy
+		{
+			controlled.GetComponent<Destroyed> ().aggressor = null;
+			controlled.GetComponent<Life> ().currentLife = 0;		
+		}
+		else if (Input.GetKey (KeyCode.E)) //attack
+		{
+			if (Input.GetMouseButtonDown (1) && mouseOver != null) 
 			{
-				controlled.GetComponent<Destroyed> ().aggressor = this.gameObject;
-				controlled.GetComponent<Life> ().currentLife = 0;
+				controlled.GetComponent<Animator> ().SetBool ("underOrder", true);
+				controlled.GetComponent<Attack> ().target = mouseOver;
 			}
 		}
+
+		if (controlled.GetComponent<Attack> ().target == null)
+			controlled.GetComponent<Animator> ().SetBool ("underOrder", false); //l'attaquant n'est plus sous l'ordre d'attaque imposé par le joueur
+		
 	}
 }

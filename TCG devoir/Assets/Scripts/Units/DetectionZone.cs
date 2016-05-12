@@ -9,7 +9,7 @@ public class DetectionZone : MonoBehaviour {
 
 	void Start () 
 	{
-		animator = GetComponentInParent<Animator>();
+		animator = GetComponentInParent<Animator> ();
 		animator.SetBool ("haveInRange", false);
 	}
 

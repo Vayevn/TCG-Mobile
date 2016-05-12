@@ -20,7 +20,8 @@ public class Life : MonoBehaviour {
 
 		if (currentLife < maxLife) {
 			currentLife += Time.deltaTime;
-		} else if (currentLife > maxLife)
+		} 
+		else if (currentLife > maxLife)
 			currentLife = maxLife;
 	}
 }

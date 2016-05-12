@@ -6,13 +6,13 @@ public class UnitMotor : MonoBehaviour {
 	protected Animator animator;
 	AnimatorStateInfo stateInfo;
 
-	public float moveMultip = 2;
+	float moveMultip = 2;
 	float idleTimeTemp;
 
-	public float xMin = -36f;
-	public float xMax = 36f;
-	public float zMin = -24;
-	public float zMax = 24;
+	float xMin;
+	float xMax;
+	float yMin;
+	float yMax;
 
 	//variables a utiliser pour les cartes
 	[HideInInspector]
@@ -23,12 +23,12 @@ public class UnitMotor : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		animator = GetComponent<Animator>();
+		animator = GetComponent<Animator> ();
 		idleTimeTemp = animator.GetFloat ("idleTime");
-		xMin = -36f;
-		xMax = 36f;
-		zMin = -24;
-		zMax = 24;
+		xMin = -24;
+		xMax = 24;
+		yMin = -36f;
+		yMax = 37f;
 	}
 	
 	// Update is called once per frame
@@ -51,7 +51,7 @@ public class UnitMotor : MonoBehaviour {
 			if (stateInfo.fullPathHash == Animator.StringToHash ("Base Layer.Idle"))
 			{
 				animator.SetFloat ("moveTime", Random.value + moveMultip);
-				direction = new Vector3 (Random.Range (-1.0f, 1.0f), 0, Random.Range (-1.0f, 1.0f)).normalized;
+				direction = new Vector3 (Random.Range (-1.0f, 1.0f), Random.Range (-1.0f, 1.0f), 0).normalized;
 				//Debug.Log (direction);
 				animator.SetFloat ("idleTime", animator.GetFloat("idleTime") - Time.deltaTime);
 			}
@@ -64,10 +64,11 @@ public class UnitMotor : MonoBehaviour {
 				else if (transform.position.x >= xMax) {
 					direction.x = -1;
 				}
-				if (transform.position.z <= zMin) {
-					direction.z = 1;
-				} else if (transform.position.z >= zMax) {
-					direction.z = -1;
+				if (transform.position.y <= yMin) {
+					direction.y = 1;
+				} 
+				else if (transform.position.y >= yMax) {
+					direction.y = -1;
 				}
 				transform.position += direction * 2 * Time.deltaTime;
 				animator.SetFloat ("moveTime", animator.GetFloat("moveTime") - Time.deltaTime);
