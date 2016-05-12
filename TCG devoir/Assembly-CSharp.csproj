@@ -45,17 +45,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Classes\cardListData.cs" />
-     <Compile Include="Assets\Scripts\Classes\carte.cs" />
-     <Compile Include="Assets\Scripts\Classes\deck.cs" />
-     <Compile Include="Assets\Scripts\Orders.cs" />
      <Compile Include="Assets\Scripts\Units\Attack.cs" />
      <Compile Include="Assets\Scripts\Units\Destroyed.cs" />
      <Compile Include="Assets\Scripts\Units\DetectionZone.cs" />
      <Compile Include="Assets\Scripts\Units\Life.cs" />
+     <Compile Include="Assets\Scripts\Units\Orders.cs" />
      <Compile Include="Assets\Scripts\Units\UnitMotor.cs" />
-     <Compile Include="Assets\cartesExistantes.cs" />
-     <None Include="Assets\Shader.shader" />
+     <None Include="Assets\Materials\Shader.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
